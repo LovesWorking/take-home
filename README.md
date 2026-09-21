@@ -17,7 +17,7 @@ Requires Node 22 and pnpm 10. Open three terminals:
 ```sh
 pnpm install
 
-pnpm server     # http://localhost:4000/api/products
+pnpm api        # http://localhost:4000/api/products
 pnpm web        # http://localhost:3000
 pnpm ios        # first run builds the dev client; afterwards `pnpm mobile` starts Metro
 ```

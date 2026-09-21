@@ -8,7 +8,7 @@
     "pnpm": ">=10"
   },
   "scripts": {
-    "server": "pnpm --filter @take-home/server dev",
+    "api": "pnpm --filter @take-home/server dev",
     "web": "pnpm --filter @take-home/web dev",
     "mobile": "pnpm --filter @take-home/mobile start",
     "ios": "pnpm --filter @take-home/mobile ios",
