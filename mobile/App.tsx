@@ -1,3 +1,4 @@
+import { Buoy, FloatingDevTools } from '@buoy-gg/core';
 import { setApiBaseUrl } from '@take-home/shared';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StatusBar } from 'expo-status-bar';
@@ -12,6 +13,8 @@ setApiBaseUrl(
   process.env.EXPO_PUBLIC_API_URL ?? Platform.select({ android: 'http://10.0.2.2:4000' }),
 );
 
+Buoy.init({ licenseKey: process.env.EXPO_PUBLIC_BUOY_KEY });
+
 const queryClient = new QueryClient();
 
 export default function App() {
@@ -20,6 +23,7 @@ export default function App() {
       <SafeAreaProvider>
         <StatusBar style="dark" />
         <ProductSearchScreen />
+        {__DEV__ && <FloatingDevTools />}
       </SafeAreaProvider>
     </QueryClientProvider>
   );
