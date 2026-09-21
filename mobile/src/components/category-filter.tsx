@@ -1,6 +1,5 @@
-import { useProductSearch } from '@take-home/shared';
+import { colors, layout, radius, spacing, typography, useProductSearch } from '@take-home/shared';
 import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
-import { useTheme } from '@/theme/use-theme';
 
 /**
  * Horizontally scrolling multi-select chip row. "All" clears the selection
@@ -9,14 +8,13 @@ import { useTheme } from '@/theme/use-theme';
 export function CategoryFilter() {
   const { categories, selectedCategories, isCategorySelected, toggleCategory, clearCategories } =
     useProductSearch();
-  const { spacing } = useTheme();
 
   return (
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
       keyboardShouldPersistTaps="handled"
-      contentContainerStyle={[styles.row, { gap: spacing.sm, paddingHorizontal: spacing.lg }]}
+      contentContainerStyle={styles.row}
       accessibilityLabel="Filter by type"
     >
       <Chip label="All" selected={selectedCategories.length === 0} onPress={clearCategories} />
@@ -41,8 +39,6 @@ function Chip({
   selected: boolean;
   onPress: () => void;
 }) {
-  const { colors, spacing, radius, layout, text } = useTheme();
-
   return (
     <Pressable
       onPress={onPress}
@@ -50,27 +46,28 @@ function Chip({
       accessibilityState={{ selected }}
       style={({ pressed }) => [
         styles.chip,
-        {
-          height: layout.chipHeight,
-          paddingHorizontal: spacing.lg,
-          borderRadius: radius.pill,
-          backgroundColor: selected ? colors.chipSelected : colors.chip,
-          borderColor: selected ? colors.chipSelected : colors.chipBorder,
-          opacity: pressed ? 0.8 : 1,
-        },
+        selected && styles.chipSelected,
+        pressed && styles.chipPressed,
       ]}
     >
-      <Text style={[text.label, { color: selected ? colors.chipSelectedText : colors.chipText }]}>
-        {label}
-      </Text>
+      <Text style={[styles.chipText, selected && styles.chipTextSelected]}>{label}</Text>
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  row: { alignItems: 'center' },
+  row: { alignItems: 'center', gap: spacing.sm, paddingHorizontal: spacing.lg },
   chip: {
     justifyContent: 'center',
+    height: layout.chipHeight,
+    paddingHorizontal: spacing.lg,
+    borderRadius: radius.pill,
     borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.chipBorder,
+    backgroundColor: colors.chip,
   },
+  chipSelected: { backgroundColor: colors.chipSelected, borderColor: colors.chipSelected },
+  chipPressed: { opacity: 0.8 },
+  chipText: { ...typography.label, color: colors.chipText },
+  chipTextSelected: { color: colors.chipSelectedText },
 });

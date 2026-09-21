@@ -57,15 +57,14 @@ web/ and mobile/                                       every component calls use
 | `shared/src/stores/product-search-store.ts` | zustand store for the query and selected categories, so every component sees the same state |
 | `shared/src/hooks/use-product-search.ts` | The hook every search component calls: `useProducts` + the store → categories, results, loading state |
 | `web/src/features/product-search/product-search-screen.tsx`, `mobile/…/product-search-screen.tsx` | The screen: early-returns per state inside a local `Layout` that holds the shared chrome |
-| `shared/src/theme/tokens.ts` | Colors (light + dark), spacing, radii, typography, layout |
+| `shared/src/theme/tokens.ts` | Colors, spacing, radii, typography, layout, shadow |
 | `shared/src/theme/css-variables.ts` | Tokens → CSS custom properties for the web |
-| `web/src/theme/apply-theme.ts` | Writes the tokens onto `<html>`; all CSS uses `var(--…)` |
-| `mobile/src/theme/use-theme.ts` | Resolves the same tokens into `StyleSheet`-ready values |
-| `web/src/main.tsx`, `mobile/App.tsx` | Call `setApiBaseUrl` with `VITE_API_URL` / `EXPO_PUBLIC_API_URL` when set |
+| `web/src/main.tsx` | Sets the API URL and writes the tokens onto `<html>` as CSS variables; all CSS uses `var(--…)` |
+| `mobile/App.tsx` | Sets the API URL; components import the tokens straight into `StyleSheet.create` |
 
 ## Design consistency
 
-Both apps read the same semantic tokens (`background`, `surface`, `chipSelected`, `textSecondary`, …), the same 4pt spacing scale, radii and type ramp, and both follow the OS light/dark setting. Only the font family is platform-owned (system font). Change `palette.primary` in `tokens.ts` and both apps update.
+Both apps read the same semantic tokens (`background`, `surface`, `chipSelected`, `textSecondary`, …), the same 4pt spacing scale, radii and type ramp. There is no theme layer: web turns the tokens into CSS variables once at startup, mobile spreads them straight into `StyleSheet.create`. Only the font family is platform-owned (system font). Change `colors.primary` in `tokens.ts` and both apps update.
 
 ## Extending
 

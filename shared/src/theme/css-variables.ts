@@ -1,13 +1,12 @@
-import { layout, radius, shadow, spacing, typography, type ThemeColors } from './tokens';
+import { colors, layout, radius, shadow, spacing, typography } from './tokens';
 
 /**
  * Flattens the design tokens into CSS custom properties so the web app can
- * style with `var(--color-primary)` etc. The web app applies the result to
- * `document.documentElement` and swaps the color set on scheme change.
+ * style with `var(--color-primary)`, `var(--space-md)`, etc.
  *
- * Naming: `--color-*`, `--space-*`, `--radius-*`, `--font-*-{size,line,weight}`.
+ * Naming: `--color-*`, `--space-*`, `--radius-*`, `--font-*-{size,line,weight,tracking}`, `--layout-*`.
  */
-export function themeToCssVariables(colors: ThemeColors): Record<string, string> {
+export function tokensToCssVariables(): Record<string, string> {
   const vars: Record<string, string> = {};
 
   for (const [key, value] of Object.entries(colors)) {

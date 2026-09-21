@@ -1,29 +1,16 @@
-import { useProductSearch } from '@take-home/shared';
+import { colors, layout, radius, spacing, typography, useProductSearch } from '@take-home/shared';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
-import { useTheme } from '@/theme/use-theme';
 
 export function SearchBar() {
   const { query, setQuery } = useProductSearch();
-  const { colors, spacing, radius, layout, text } = useTheme();
 
   return (
-    <View
-      style={[
-        styles.container,
-        {
-          height: layout.inputHeight,
-          borderRadius: radius.md,
-          borderColor: colors.border,
-          backgroundColor: colors.surface,
-          paddingHorizontal: spacing.md,
-        },
-      ]}
-    >
-      <Text style={[styles.icon, { color: colors.textTertiary }]} accessibilityElementsHidden>
+    <View style={styles.container}>
+      <Text style={styles.icon} accessibilityElementsHidden>
         ⌕
       </Text>
       <TextInput
-        style={[styles.input, text.body, { color: colors.text }]}
+        style={styles.input}
         value={query}
         onChangeText={setQuery}
         placeholder="Search Pokémon"
@@ -45,7 +32,7 @@ export function SearchBar() {
             { backgroundColor: pressed ? colors.badge : 'transparent' },
           ]}
         >
-          <Text style={{ color: colors.textTertiary, fontSize: 16 }}>✕</Text>
+          <Text style={styles.clearIcon}>✕</Text>
         </Pressable>
       )}
     </View>
@@ -56,10 +43,15 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    height: layout.inputHeight,
+    paddingHorizontal: spacing.md,
     borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.border,
+    borderRadius: radius.md,
+    backgroundColor: colors.surface,
   },
-  icon: { fontSize: 20, marginRight: 8, marginTop: -2 },
-  input: { flex: 1, height: '100%', paddingVertical: 0 },
+  icon: { fontSize: 20, marginRight: spacing.sm, marginTop: -2, color: colors.textTertiary },
+  input: { ...typography.body, flex: 1, height: '100%', paddingVertical: 0, color: colors.text },
   clear: {
     width: 32,
     height: 32,
@@ -67,4 +59,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  clearIcon: { fontSize: 16, color: colors.textTertiary },
 });

@@ -1,17 +1,17 @@
 import { LegendList, type LegendListRenderItemProps } from '@legendapp/list/react-native';
-import { useProductSearch, type Product } from '@take-home/shared';
+import { spacing, useProductSearch, type Product } from '@take-home/shared';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ProductCard } from '@/components/product-card';
-import { useTheme } from '@/theme/use-theme';
 
 const renderItem = ({ item }: LegendListRenderItemProps<Product>) => (
   <ProductCard product={item} />
 );
 
+const Separator = () => <View style={{ height: spacing.md }} />;
+
 export function ProductList() {
   const { results } = useProductSearch();
-  const { spacing } = useTheme();
   const insets = useSafeAreaInsets();
 
   return (
@@ -26,7 +26,7 @@ export function ProductList() {
         paddingHorizontal: spacing.lg,
         paddingBottom: insets.bottom + spacing.xl,
       }}
-      ItemSeparatorComponent={() => <View style={{ height: spacing.md }} />}
+      ItemSeparatorComponent={Separator}
     />
   );
 }

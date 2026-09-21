@@ -1,7 +1,7 @@
 /*
  * Global styles. Every color / size below comes from the shared design tokens
- * via CSS custom properties set in `theme/apply-theme.ts`. Do not hard-code
- * colors here; add a token in `shared/src/theme/tokens.ts` instead.
+ * via CSS custom properties set once in `main.tsx`. Do not hard-code colors
+ * here; add a token in `shared/src/theme/tokens.ts` instead.
  */
 
 *,

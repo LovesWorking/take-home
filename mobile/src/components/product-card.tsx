@@ -1,75 +1,51 @@
 import {
+  colors,
   formatNumber,
   formatPrice,
   formatRating,
   formatReviewCount,
   formatSize,
+  radius,
+  shadow,
+  spacing,
+  typography,
   type Product,
 } from '@take-home/shared';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { useTheme } from '@/theme/use-theme';
 
 export function ProductCard({ product }: { product: Product }) {
-  const { colors, spacing, radius, text, cardShadow } = useTheme();
-
   return (
     <View
       accessible
       accessibilityLabel={`${product.name}, ${formatPrice(product.price)}, rated ${formatRating(product.rating)} out of 5`}
-      style={[
-        styles.card,
-        cardShadow,
-        {
-          gap: spacing.sm,
-          padding: spacing.lg,
-          borderRadius: radius.lg,
-          borderColor: colors.border,
-          backgroundColor: colors.surface,
-        },
-      ]}
+      style={styles.card}
     >
-      <View style={[styles.media, { borderRadius: radius.md, backgroundColor: colors.badge }]}>
+      <View style={styles.media}>
         <Image source={{ uri: product.imageUrl }} style={styles.image} resizeMode="contain" />
-        <Text
-          style={[
-            text.label,
-            styles.number,
-            { color: colors.textTertiary, top: spacing.sm, right: spacing.sm },
-          ]}
-        >
-          {formatNumber(product.number)}
-        </Text>
+        <Text style={styles.number}>{formatNumber(product.number)}</Text>
       </View>
 
-      <View style={[styles.row, { gap: spacing.sm, flexWrap: 'wrap' }]}>
+      <View style={styles.badges}>
         {product.types.map((type) => (
-          <View
-            key={type}
-            style={[
-              styles.badge,
-              { paddingHorizontal: spacing.sm, borderRadius: radius.sm, backgroundColor: colors.badge },
-            ]}
-          >
-            <Text style={[text.label, { color: colors.badgeText }]}>{type}</Text>
+          <View key={type} style={styles.badge}>
+            <Text style={styles.badgeText}>{type}</Text>
           </View>
         ))}
-        {!product.inStock && (
-          <Text style={[text.label, { color: colors.danger }]}>Out of stock</Text>
-        )}
+        {!product.inStock && <Text style={styles.outOfStock}>Out of stock</Text>}
       </View>
 
-      <Text style={[text.heading, { color: colors.text }]}>{product.name}</Text>
-      <Text style={[text.caption, { color: colors.textSecondary }]}>
+      <Text style={styles.name}>{product.name}</Text>
+      <Text style={styles.meta}>
         {product.species} · {formatSize(product.heightM, product.weightKg)}
       </Text>
-      <Text style={[text.body, { color: colors.textSecondary }]} numberOfLines={2}>
+      <Text style={styles.description} numberOfLines={2}>
         {product.description}
       </Text>
 
-      <View style={[styles.row, styles.footer, { paddingTop: spacing.sm }]}>
-        <Text style={[text.heading, { color: colors.text }]}>{formatPrice(product.price)}</Text>
-        <Text style={[text.caption, { color: colors.textSecondary }]}>
-          <Text style={{ color: colors.star }}>★ </Text>
+      <View style={styles.footer}>
+        <Text style={styles.price}>{formatPrice(product.price)}</Text>
+        <Text style={styles.rating}>
+          <Text style={styles.star}>★ </Text>
           {formatRating(product.rating)} · {formatReviewCount(product.reviewCount)}
         </Text>
       </View>
@@ -78,11 +54,54 @@ export function ProductCard({ product }: { product: Product }) {
 }
 
 const styles = StyleSheet.create({
-  card: { borderWidth: StyleSheet.hairlineWidth },
-  media: { height: 140, alignItems: 'center', justifyContent: 'center' },
+  card: {
+    gap: spacing.sm,
+    padding: spacing.lg,
+    borderRadius: radius.lg,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    shadowColor: shadow.card.color,
+    shadowOpacity: shadow.card.opacity,
+    shadowRadius: shadow.card.radius,
+    shadowOffset: { width: 0, height: shadow.card.offsetY },
+    elevation: 2,
+  },
+  media: {
+    height: 140,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: radius.md,
+    backgroundColor: colors.badge,
+  },
   image: { width: 120, height: 120 },
-  number: { position: 'absolute' },
-  row: { flexDirection: 'row', alignItems: 'center' },
-  footer: { justifyContent: 'space-between' },
-  badge: { height: 22, justifyContent: 'center' },
+  number: {
+    ...typography.label,
+    position: 'absolute',
+    top: spacing.sm,
+    right: spacing.sm,
+    color: colors.textTertiary,
+  },
+  badges: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: spacing.sm },
+  badge: {
+    height: 22,
+    justifyContent: 'center',
+    paddingHorizontal: spacing.sm,
+    borderRadius: radius.sm,
+    backgroundColor: colors.badge,
+  },
+  badgeText: { ...typography.label, color: colors.badgeText },
+  outOfStock: { ...typography.label, color: colors.danger },
+  name: { ...typography.heading, color: colors.text },
+  meta: { ...typography.caption, color: colors.textSecondary },
+  description: { ...typography.body, color: colors.textSecondary },
+  footer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: spacing.sm,
+  },
+  price: { ...typography.heading, color: colors.text },
+  rating: { ...typography.caption, color: colors.textSecondary },
+  star: { color: colors.star },
 });
