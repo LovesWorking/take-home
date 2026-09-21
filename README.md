@@ -38,7 +38,7 @@ shared/hooks/use-product-search.ts                     useProducts + store → c
         │
 web/ and mobile/                                       every component calls useProductSearch() itself;
   ProductSearchScreen                                  the screen early-returns one state per branch
-    └─ ProductSearchLayout (title, SearchBar, chips)   (loading / error / empty / results) inside the
+    └─ Layout (title, SearchBar, chips)              (loading / error / empty / results) inside the
          └─ LoadingState | ErrorState |                shared layout, per the "component composition"
             ResultsMeta + EmptyState |                 pattern
             ResultsMeta + ProductList
@@ -56,7 +56,7 @@ web/ and mobile/                                       every component calls use
 | `shared/src/products/search-products.ts` | Pure `searchProducts` / `getCategories`; case- and accent-insensitive, multi-word AND, categories OR |
 | `shared/src/stores/product-search-store.ts` | zustand store for the query and selected categories, so every component sees the same state |
 | `shared/src/hooks/use-product-search.ts` | The hook every search component calls: `useProducts` + the store → categories, results, loading state |
-| `web/src/features/product-search/`, `mobile/src/features/product-search/` | `ProductSearchLayout` (shared chrome) and the screen, which early-returns per state |
+| `web/src/features/product-search/product-search-screen.tsx`, `mobile/…/product-search-screen.tsx` | The screen: early-returns per state inside a local `Layout` that holds the shared chrome |
 | `shared/src/theme/tokens.ts` | Colors (light + dark), spacing, radii, typography, layout |
 | `shared/src/theme/css-variables.ts` | Tokens → CSS custom properties for the web |
 | `web/src/theme/apply-theme.ts` | Writes the tokens onto `<html>`; all CSS uses `var(--…)` |
