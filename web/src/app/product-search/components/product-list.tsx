@@ -1,5 +1,5 @@
 import { useProductSearch } from '@take-home/shared';
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from './product-card';
 
 export function ProductList() {
   const { results } = useProductSearch();

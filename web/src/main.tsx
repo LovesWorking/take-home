@@ -2,7 +2,7 @@ import { setApiBaseUrl, tokensToCssVariables } from '@take-home/shared';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { App } from './App';
+import { ProductSearchScreen } from './app/product-search/product-search-screen';
 import './styles/global.css';
 
 // Optional override of the mock API URL (defaults to http://localhost:4000).
@@ -19,7 +19,7 @@ const queryClient = new QueryClient();
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <ProductSearchScreen />
     </QueryClientProvider>
   </StrictMode>,
 );

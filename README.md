@@ -56,7 +56,7 @@ web/ and mobile/                                       every component calls use
 | `shared/src/products/search-products.ts` | Pure `searchProducts` / `getCategories`; case- and accent-insensitive, multi-word AND, categories OR |
 | `shared/src/stores/product-search-store.ts` | zustand store for the query and selected categories, so every component sees the same state |
 | `shared/src/hooks/use-product-search.ts` | The hook every search component calls: `useProducts` + the store → categories, results, loading state |
-| `web/src/features/product-search/product-search-screen.tsx`, `mobile/…/product-search-screen.tsx` | The screen: early-returns per state inside a local `Layout` that holds the shared chrome |
+| `web/src/app/product-search/`, `mobile/app/product-search/` | The screen at the top level, and under `components/` everything it renders (search bar, chips, list, card, loading / error / empty states) |
 | `shared/src/theme/tokens.ts` | Colors, spacing, radii, typography, layout, shadow |
 | `shared/src/theme/css-variables.ts` | Tokens → CSS custom properties for the web |
 | `web/src/main.tsx` | Sets the API URL and writes the tokens onto `<html>` as CSS variables; all CSS uses `var(--…)` |

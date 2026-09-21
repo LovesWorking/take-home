@@ -2,7 +2,7 @@ import { LegendList, type LegendListRenderItemProps } from '@legendapp/list/reac
 import { spacing, useProductSearch, type Product } from '@take-home/shared';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from './product-card';
 
 const renderItem = ({ item }: LegendListRenderItemProps<Product>) => (
   <ProductCard product={item} />

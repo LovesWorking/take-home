@@ -2,13 +2,13 @@ import { colors, spacing, typography, useProductSearch } from '@take-home/shared
 import type { ReactNode } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { CategoryFilter } from '@/components/category-filter';
-import { EmptyState } from '@/components/empty-state';
-import { ErrorState } from '@/components/error-state';
-import { LoadingState } from '@/components/loading-state';
-import { ProductList } from '@/components/product-list';
-import { ResultsMeta } from '@/components/results-meta';
-import { SearchBar } from '@/components/search-bar';
+import { CategoryFilter } from './components/category-filter';
+import { EmptyState } from './components/empty-state';
+import { ErrorState } from './components/error-state';
+import { LoadingState } from './components/loading-state';
+import { ProductList } from './components/product-list';
+import { ResultsMeta } from './components/results-meta';
+import { SearchBar } from './components/search-bar';
 
 /**
  * The single screen of the app. One early return per state, each wrapped in the

@@ -1,12 +1,12 @@
 import { useProductSearch } from '@take-home/shared';
 import type { ReactNode } from 'react';
-import { CategoryFilter } from '@/components/category-filter';
-import { EmptyState } from '@/components/empty-state';
-import { ErrorState } from '@/components/error-state';
-import { LoadingState } from '@/components/loading-state';
-import { ProductList } from '@/components/product-list';
-import { ResultsMeta } from '@/components/results-meta';
-import { SearchBar } from '@/components/search-bar';
+import { CategoryFilter } from './components/category-filter';
+import { EmptyState } from './components/empty-state';
+import { ErrorState } from './components/error-state';
+import { LoadingState } from './components/loading-state';
+import { ProductList } from './components/product-list';
+import { ResultsMeta } from './components/results-meta';
+import { SearchBar } from './components/search-bar';
 
 /**
  * The single page of the app. One early return per state, each wrapped in the
