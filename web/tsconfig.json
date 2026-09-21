@@ -8,7 +8,9 @@
     "types": ["vite/client"],
     "noEmit": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@buoy-gg/core": ["../node_modules/@buoy-gg/core/lib/typescript/module/index.web.d.ts"],
+      "@buoy-gg/license": ["../node_modules/@buoy-gg/license/lib/typescript/module/index.web.d.ts"]
     }
   },
   "include": ["src", "vite.config.ts"]

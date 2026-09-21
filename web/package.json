@@ -10,10 +10,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@buoy-gg/core": "7.0.40",
+    "@buoy-gg/external-sync": "7.0.40",
+    "@buoy-gg/react-query": "7.0.40",
     "@take-home/shared": "workspace:*",
     "@tanstack/react-query": "^5.90.0",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
     "@types/react": "~19.2.4",
