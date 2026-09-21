@@ -1,0 +1,1096 @@
+[
+  {
+    "id": "001",
+    "number": 1,
+    "name": "Bulbasaur",
+    "species": "Seed Pokémon",
+    "category": "Grass",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "price": 476.99,
+    "rating": 3.9,
+    "reviewCount": 2589,
+    "description": "It can go for days without eating a single morsel. In the bulb on its back, it stores energy.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    "heightM": 0.7,
+    "weightKg": 6.9,
+    "tags": [
+      "Overgrow"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "002",
+    "number": 2,
+    "name": "Ivysaur",
+    "species": "Seed Pokémon",
+    "category": "Grass",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "price": 607.99,
+    "rating": 4.2,
+    "reviewCount": 3603,
+    "description": "The bud on its back grows by drawing energy. It gives off an aroma when it is ready to bloom.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+    "heightM": 1,
+    "weightKg": 13,
+    "tags": [
+      "Overgrow"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "003",
+    "number": 3,
+    "name": "Venusaur",
+    "species": "Seed Pokémon",
+    "category": "Grass",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "price": 787.99,
+    "rating": 3.9,
+    "reviewCount": 3430,
+    "description": "The flower on its back catches the sun’s rays. The sunlight is then absorbed and used for energy.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+    "heightM": 2,
+    "weightKg": 100,
+    "tags": [
+      "Overgrow"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "004",
+    "number": 4,
+    "name": "Charmander",
+    "species": "Lizard Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire"
+    ],
+    "price": 463.99,
+    "rating": 4.9,
+    "reviewCount": 1030,
+    "description": "The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    "heightM": 0.6,
+    "weightKg": 8.5,
+    "tags": [
+      "Blaze"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "005",
+    "number": 5,
+    "name": "Charmeleon",
+    "species": "Flame Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire"
+    ],
+    "price": 607.99,
+    "rating": 3.9,
+    "reviewCount": 3397,
+    "description": "Tough fights could excite this Pokémon. When excited, it may breathe out bluish-white flames.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+    "heightM": 1.1,
+    "weightKg": 19,
+    "tags": [
+      "Blaze"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "006",
+    "number": 6,
+    "name": "Charizard",
+    "species": "Flame Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "price": 800.99,
+    "rating": 4.4,
+    "reviewCount": 2781,
+    "description": "When this Pokémon expels a blast of superhot fire, the red flame at the tip of its tail burns more intensely.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+    "heightM": 1.7,
+    "weightKg": 90.5,
+    "tags": [
+      "Blaze"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "007",
+    "number": 7,
+    "name": "Squirtle",
+    "species": "Tiny Turtle Pokémon",
+    "category": "Water",
+    "types": [
+      "Water"
+    ],
+    "price": 470.99,
+    "rating": 4.3,
+    "reviewCount": 490,
+    "description": "Shoots water at prey while in the water. Withdraws into its shell when in danger.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    "heightM": 0.5,
+    "weightKg": 9,
+    "tags": [
+      "Torrent"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "008",
+    "number": 8,
+    "name": "Wartortle",
+    "species": "Turtle Pokémon",
+    "category": "Water",
+    "types": [
+      "Water"
+    ],
+    "price": 607.99,
+    "rating": 3.8,
+    "reviewCount": 321,
+    "description": "When tapped on its head, this Pokémon will pull it in, but its tail will still stick out a little bit.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
+    "heightM": 1,
+    "weightKg": 22.5,
+    "tags": [
+      "Torrent"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "009",
+    "number": 9,
+    "name": "Blastoise",
+    "species": "Shellfish Pokémon",
+    "category": "Water",
+    "types": [
+      "Water"
+    ],
+    "price": 794.99,
+    "rating": 3.8,
+    "reviewCount": 2195,
+    "description": "Once it takes aim at its enemy, it blasts out water with even more force than a fire hose.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+    "heightM": 1.6,
+    "weightKg": 85.5,
+    "tags": [
+      "Torrent"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "012",
+    "number": 12,
+    "name": "Butterfree",
+    "species": "Butterfly Pokémon",
+    "category": "Bug",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "price": 592.99,
+    "rating": 4.9,
+    "reviewCount": 2583,
+    "description": "Its wings, covered with poisonous powder, repel water. This allows it to fly in the rain.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png",
+    "heightM": 1.1,
+    "weightKg": 32,
+    "tags": [
+      "Compound Eyes"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "018",
+    "number": 18,
+    "name": "Pidgeot",
+    "species": "Bird Pokémon",
+    "category": "Normal",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "price": 718.99,
+    "rating": 4.1,
+    "reviewCount": 1016,
+    "description": "This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png",
+    "heightM": 1.5,
+    "weightKg": 39.5,
+    "tags": [
+      "Keen Eye",
+      "Tangled Feet"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "025",
+    "number": 25,
+    "name": "Pikachu",
+    "species": "Mouse Pokémon",
+    "category": "Electric",
+    "types": [
+      "Electric"
+    ],
+    "price": 479.99,
+    "rating": 4.1,
+    "reviewCount": 1019,
+    "description": "This forest-dwelling Pokémon stores electricity in its cheeks, so you’ll feel a tingly shock if you touch it.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    "heightM": 0.4,
+    "weightKg": 6,
+    "tags": [
+      "Static"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "026",
+    "number": 26,
+    "name": "Raichu",
+    "species": "Mouse Pokémon",
+    "category": "Electric",
+    "types": [
+      "Electric"
+    ],
+    "price": 727.99,
+    "rating": 4.8,
+    "reviewCount": 1575,
+    "description": "When electricity builds up inside its body, it becomes feisty. It also glows in the dark.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
+    "heightM": 0.8,
+    "weightKg": 30,
+    "tags": [
+      "Static"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "035",
+    "number": 35,
+    "name": "Clefairy",
+    "species": "Fairy Pokémon",
+    "category": "Fairy",
+    "types": [
+      "Fairy"
+    ],
+    "price": 484.99,
+    "rating": 4.8,
+    "reviewCount": 1584,
+    "description": "Adored for their cute looks and playfulness. They are thought to be rare, as they do not appear often.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/35.png",
+    "heightM": 0.6,
+    "weightKg": 7.5,
+    "tags": [
+      "Cute Charm",
+      "Magic Guard"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "037",
+    "number": 37,
+    "name": "Vulpix",
+    "species": "Fox Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire"
+    ],
+    "price": 448.99,
+    "rating": 4.6,
+    "reviewCount": 1243,
+    "description": "Both its fur and its tails are beautiful. As it grows, the tails split and form more tails.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/37.png",
+    "heightM": 0.6,
+    "weightKg": 9.9,
+    "tags": [
+      "Flash Fire"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "038",
+    "number": 38,
+    "name": "Ninetales",
+    "species": "Fox Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire"
+    ],
+    "price": 757.99,
+    "rating": 4.1,
+    "reviewCount": 2828,
+    "description": "According to an enduring legend, nine noble saints were united and reincarnated as this Pokémon.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
+    "heightM": 1.1,
+    "weightKg": 19.9,
+    "tags": [
+      "Flash Fire"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "039",
+    "number": 39,
+    "name": "Jigglypuff",
+    "species": "Balloon Pokémon",
+    "category": "Normal",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "price": 404.99,
+    "rating": 4,
+    "reviewCount": 1606,
+    "description": "Uses its cute round eyes to enrapture its foe. It then sings a pleasing melody that lulls the foe to sleep.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
+    "heightM": 0.5,
+    "weightKg": 5.5,
+    "tags": [
+      "Cute Charm",
+      "Competitive"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "052",
+    "number": 52,
+    "name": "Meowth",
+    "species": "Scratch Cat Pokémon",
+    "category": "Normal",
+    "types": [
+      "Normal"
+    ],
+    "price": 434.99,
+    "rating": 4.4,
+    "reviewCount": 295,
+    "description": "Appears to be more active at night. It loves round and shiny things. It can’t stop itself from picking them up.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png",
+    "heightM": 0.4,
+    "weightKg": 4.2,
+    "tags": [
+      "Pickup",
+      "Technician"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "054",
+    "number": 54,
+    "name": "Psyduck",
+    "species": "Duck Pokémon",
+    "category": "Water",
+    "types": [
+      "Water"
+    ],
+    "price": 479.99,
+    "rating": 4.5,
+    "reviewCount": 2057,
+    "description": "Always tormented by headaches. It uses psychic powers, but whether it intends to do so is not known.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png",
+    "heightM": 0.8,
+    "weightKg": 19.6,
+    "tags": [
+      "Damp",
+      "Cloud Nine"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "058",
+    "number": 58,
+    "name": "Growlithe",
+    "species": "Puppy Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire"
+    ],
+    "price": 524.99,
+    "rating": 4.3,
+    "reviewCount": 1721,
+    "description": "A Pokémon with a friendly nature. However, it will bark fiercely at anything invading its territory.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/58.png",
+    "heightM": 0.7,
+    "weightKg": 19,
+    "tags": [
+      "Intimidate",
+      "Flash Fire"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "059",
+    "number": 59,
+    "name": "Arcanine",
+    "species": "Legendary Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire"
+    ],
+    "price": 832.99,
+    "rating": 4.8,
+    "reviewCount": 271,
+    "description": "A legendary Pokémon in the East. Many people are charmed by the grace and beauty of its running.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png",
+    "heightM": 1.9,
+    "weightKg": 155,
+    "tags": [
+      "Intimidate",
+      "Flash Fire"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "063",
+    "number": 63,
+    "name": "Abra",
+    "species": "Psi Pokémon",
+    "category": "Psychic",
+    "types": [
+      "Psychic"
+    ],
+    "price": 464.99,
+    "rating": 4.3,
+    "reviewCount": 1035,
+    "description": "Sleeps 18 hours a day. If it senses danger, it will teleport itself to safety even as it sleeps.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png",
+    "heightM": 0.9,
+    "weightKg": 19.5,
+    "tags": [
+      "Synchronize",
+      "Inner Focus"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "065",
+    "number": 65,
+    "name": "Alakazam",
+    "species": "Psi Pokémon",
+    "category": "Psychic",
+    "types": [
+      "Psychic"
+    ],
+    "price": 749.99,
+    "rating": 4.6,
+    "reviewCount": 1488,
+    "description": "A Pokémon that can memorize anything. It never forgets what it learns—that’s why this Pokémon is smart.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png",
+    "heightM": 1.5,
+    "weightKg": 48,
+    "tags": [
+      "Synchronize",
+      "Inner Focus"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "066",
+    "number": 66,
+    "name": "Machop",
+    "species": "Superpower Pokémon",
+    "category": "Fighting",
+    "types": [
+      "Fighting"
+    ],
+    "price": 457.99,
+    "rating": 3.8,
+    "reviewCount": 3200,
+    "description": "Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/66.png",
+    "heightM": 0.8,
+    "weightKg": 19.5,
+    "tags": [
+      "Guts",
+      "No Guard"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "068",
+    "number": 68,
+    "name": "Machamp",
+    "species": "Superpower Pokémon",
+    "category": "Fighting",
+    "types": [
+      "Fighting"
+    ],
+    "price": 757.99,
+    "rating": 4.1,
+    "reviewCount": 1777,
+    "description": "One arm alone can move mountains. Using all four arms, this Pokémon fires off awesome punches.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png",
+    "heightM": 1.6,
+    "weightKg": 130,
+    "tags": [
+      "Guts",
+      "No Guard"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "076",
+    "number": 76,
+    "name": "Golem",
+    "species": "Megaton Pokémon",
+    "category": "Rock",
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "price": 742.99,
+    "rating": 3.8,
+    "reviewCount": 420,
+    "description": "Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it’s exposed to air.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/76.png",
+    "heightM": 1.4,
+    "weightKg": 300,
+    "tags": [
+      "Rock Head",
+      "Sturdy"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "079",
+    "number": 79,
+    "name": "Slowpoke",
+    "species": "Dopey Pokémon",
+    "category": "Water",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "price": 472.99,
+    "rating": 4.7,
+    "reviewCount": 3646,
+    "description": "Incredibly slow and sluggish. It is quite content to loll about without worrying about the time.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png",
+    "heightM": 1.2,
+    "weightKg": 36,
+    "tags": [
+      "Oblivious",
+      "Own Tempo"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "092",
+    "number": 92,
+    "name": "Gastly",
+    "species": "Gas Pokémon",
+    "category": "Ghost",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "price": 464.99,
+    "rating": 4.2,
+    "reviewCount": 3189,
+    "description": "Said to appear in decrepit, deserted buildings. It has no real shape, as it appears to be made of a gas.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png",
+    "heightM": 1.3,
+    "weightKg": 0.1,
+    "tags": [
+      "Levitate"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "093",
+    "number": 93,
+    "name": "Haunter",
+    "species": "Gas Pokémon",
+    "category": "Ghost",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "price": 607.99,
+    "rating": 4.7,
+    "reviewCount": 1586,
+    "description": "By licking, it saps the victim’s life. It causes shaking that won’t stop until the victim’s demise.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png",
+    "heightM": 1.6,
+    "weightKg": 0.1,
+    "tags": [
+      "Levitate"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "094",
+    "number": 94,
+    "name": "Gengar",
+    "species": "Shadow Pokémon",
+    "category": "Ghost",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "price": 749.99,
+    "rating": 3.8,
+    "reviewCount": 3076,
+    "description": "A Gengar is close by if you feel a sudden chill. It may be trying to lay a curse on you.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+    "heightM": 1.5,
+    "weightKg": 40.5,
+    "tags": [
+      "Cursed Body"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "095",
+    "number": 95,
+    "name": "Onix",
+    "species": "Rock Snake Pokémon",
+    "category": "Rock",
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "price": 577.99,
+    "rating": 4.6,
+    "reviewCount": 1456,
+    "description": "Burrows at high speed in search of food. The tunnels it leaves are used as homes by Diglett.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png",
+    "heightM": 8.8,
+    "weightKg": 210,
+    "tags": [
+      "Rock Head",
+      "Sturdy"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "104",
+    "number": 104,
+    "name": "Cubone",
+    "species": "Lonely Pokémon",
+    "category": "Ground",
+    "types": [
+      "Ground"
+    ],
+    "price": 479.99,
+    "rating": 4.4,
+    "reviewCount": 776,
+    "description": "Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/104.png",
+    "heightM": 0.4,
+    "weightKg": 6.5,
+    "tags": [
+      "Rock Head",
+      "Lightning Rod"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "123",
+    "number": 123,
+    "name": "Scyther",
+    "species": "Mantis Pokémon",
+    "category": "Bug",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "price": 749.99,
+    "rating": 4.6,
+    "reviewCount": 1195,
+    "description": "Leaps out of tall grass and slices prey with its scythes. The movement looks like that of a ninja.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/123.png",
+    "heightM": 1.5,
+    "weightKg": 56,
+    "tags": [
+      "Swarm",
+      "Technician"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "129",
+    "number": 129,
+    "name": "Magikarp",
+    "species": "Fish Pokémon",
+    "category": "Water",
+    "types": [
+      "Water"
+    ],
+    "price": 299.99,
+    "rating": 3.9,
+    "reviewCount": 3651,
+    "description": "Famous for being very unreliable. It can be found swimming in seas, lakes, rivers, and shallow puddles.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/129.png",
+    "heightM": 0.9,
+    "weightKg": 10,
+    "tags": [
+      "Swift Swim"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "130",
+    "number": 130,
+    "name": "Gyarados",
+    "species": "Atrocious Pokémon",
+    "category": "Water",
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "price": 809.99,
+    "rating": 4.4,
+    "reviewCount": 1621,
+    "description": "Brutally vicious and enormously destructive. Known for totally destroying cities in ancient times.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png",
+    "heightM": 6.5,
+    "weightKg": 235,
+    "tags": [
+      "Intimidate"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "131",
+    "number": 131,
+    "name": "Lapras",
+    "species": "Transport Pokémon",
+    "category": "Water",
+    "types": [
+      "Water",
+      "Ice"
+    ],
+    "price": 802.99,
+    "rating": 3.9,
+    "reviewCount": 3065,
+    "description": "A gentle soul that can understand human speech. It can ferry people across the sea on its back.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png",
+    "heightM": 2.5,
+    "weightKg": 220,
+    "tags": [
+      "Water Absorb",
+      "Shell Armor"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "132",
+    "number": 132,
+    "name": "Ditto",
+    "species": "Transform Pokémon",
+    "category": "Normal",
+    "types": [
+      "Normal"
+    ],
+    "price": 431.99,
+    "rating": 4.5,
+    "reviewCount": 1679,
+    "description": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
+    "heightM": 0.3,
+    "weightKg": 4,
+    "tags": [
+      "Limber"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "133",
+    "number": 133,
+    "name": "Eevee",
+    "species": "Evolution Pokémon",
+    "category": "Normal",
+    "types": [
+      "Normal"
+    ],
+    "price": 487.99,
+    "rating": 4.2,
+    "reviewCount": 4048,
+    "description": "It can evolve into a variety of forms. Eevee’s genes are the key to solving the mysteries of Pokémon evolution.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
+    "heightM": 0.3,
+    "weightKg": 6.5,
+    "tags": [
+      "Run Away",
+      "Adaptability"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "134",
+    "number": 134,
+    "name": "Vaporeon",
+    "species": "Bubble Jet Pokémon",
+    "category": "Water",
+    "types": [
+      "Water"
+    ],
+    "price": 787.99,
+    "rating": 4.2,
+    "reviewCount": 1803,
+    "description": "Its cell structure is similar to water molecules. It melts into the water and becomes invisible.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png",
+    "heightM": 1,
+    "weightKg": 29,
+    "tags": [
+      "Water Absorb"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "135",
+    "number": 135,
+    "name": "Jolteon",
+    "species": "Lightning Pokémon",
+    "category": "Electric",
+    "types": [
+      "Electric"
+    ],
+    "price": 787.99,
+    "rating": 4.3,
+    "reviewCount": 2315,
+    "description": "A sensitive Pokémon that easily becomes sad or angry. Every time its mood changes, it charges power.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png",
+    "heightM": 0.8,
+    "weightKg": 24.5,
+    "tags": [
+      "Volt Absorb"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "136",
+    "number": 136,
+    "name": "Flareon",
+    "species": "Flame Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire"
+    ],
+    "price": 787.99,
+    "rating": 4.1,
+    "reviewCount": 3659,
+    "description": "It has a flame chamber inside its body. It inhales, then breathes out fire that is over 3,000 degrees Fahrenheit.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png",
+    "heightM": 0.9,
+    "weightKg": 25,
+    "tags": [
+      "Flash Fire"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "143",
+    "number": 143,
+    "name": "Snorlax",
+    "species": "Sleeping Pokémon",
+    "category": "Normal",
+    "types": [
+      "Normal"
+    ],
+    "price": 809.99,
+    "rating": 4.2,
+    "reviewCount": 3555,
+    "description": "Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+    "heightM": 2.1,
+    "weightKg": 460,
+    "tags": [
+      "Immunity",
+      "Thick Fat"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "144",
+    "number": 144,
+    "name": "Articuno",
+    "species": "Freeze Pokémon",
+    "category": "Ice",
+    "types": [
+      "Ice",
+      "Flying"
+    ],
+    "price": 2319.99,
+    "rating": 3.8,
+    "reviewCount": 706,
+    "description": "A legendary bird Pokémon. It freezes water that is contained in winter air and makes it snow.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png",
+    "heightM": 1.7,
+    "weightKg": 55.4,
+    "tags": [
+      "Pressure",
+      "Legendary"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "145",
+    "number": 145,
+    "name": "Zapdos",
+    "species": "Electric Pokémon",
+    "category": "Electric",
+    "types": [
+      "Electric",
+      "Flying"
+    ],
+    "price": 2319.99,
+    "rating": 4.7,
+    "reviewCount": 2427,
+    "description": "This legendary bird Pokémon is said to appear when the sky turns dark and lightning showers down.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png",
+    "heightM": 1.6,
+    "weightKg": 52.6,
+    "tags": [
+      "Pressure",
+      "Legendary"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "146",
+    "number": 146,
+    "name": "Moltres",
+    "species": "Flame Pokémon",
+    "category": "Fire",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "price": 2319.99,
+    "rating": 4.8,
+    "reviewCount": 3700,
+    "description": "A legendary bird Pokémon. As it flaps its flaming wings, even the night sky will turn red.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png",
+    "heightM": 2,
+    "weightKg": 60,
+    "tags": [
+      "Pressure",
+      "Legendary"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "147",
+    "number": 147,
+    "name": "Dratini",
+    "species": "Dragon Pokémon",
+    "category": "Dragon",
+    "types": [
+      "Dragon"
+    ],
+    "price": 449.99,
+    "rating": 4.4,
+    "reviewCount": 1292,
+    "description": "Long thought to be a myth, this Pokémon’s existence was only recently confirmed by a fisherman who caught one.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/147.png",
+    "heightM": 1.8,
+    "weightKg": 3.3,
+    "tags": [
+      "Shed Skin"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "148",
+    "number": 148,
+    "name": "Dragonair",
+    "species": "Dragon Pokémon",
+    "category": "Dragon",
+    "types": [
+      "Dragon"
+    ],
+    "price": 629.99,
+    "rating": 4.7,
+    "reviewCount": 3955,
+    "description": "According to a witness, its body was surrounded by a strange aura that gave it a mystical look.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/148.png",
+    "heightM": 4,
+    "weightKg": 16.5,
+    "tags": [
+      "Shed Skin"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "149",
+    "number": 149,
+    "name": "Dragonite",
+    "species": "Dragon Pokémon",
+    "category": "Dragon",
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "price": 899.99,
+    "rating": 4.7,
+    "reviewCount": 1953,
+    "description": "It is said that this Pokémon lives somewhere in the sea and that it flies. However, these are only rumors.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png",
+    "heightM": 2.2,
+    "weightKg": 210,
+    "tags": [
+      "Inner Focus"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "150",
+    "number": 150,
+    "name": "Mewtwo",
+    "species": "Genetic Pokémon",
+    "category": "Psychic",
+    "types": [
+      "Psychic"
+    ],
+    "price": 2719.99,
+    "rating": 4.9,
+    "reviewCount": 1405,
+    "description": "Its DNA is almost the same as Mew’s. However, its size and disposition are vastly different.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+    "heightM": 2,
+    "weightKg": 122,
+    "tags": [
+      "Pressure",
+      "Legendary"
+    ],
+    "inStock": false
+  },
+  {
+    "id": "151",
+    "number": 151,
+    "name": "Mew",
+    "species": "New Species Pokémon",
+    "category": "Psychic",
+    "types": [
+      "Psychic"
+    ],
+    "price": 2399.99,
+    "rating": 4.9,
+    "reviewCount": 2871,
+    "description": "When viewed through a microscope, this Pokémon’s short, fine, delicate hair can be seen.",
+    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png",
+    "heightM": 0.4,
+    "weightKg": 4,
+    "tags": [
+      "Synchronize",
+      "Legendary"
+    ],
+    "inStock": false
+  }
+]

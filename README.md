@@ -1,31 +1,81 @@
-# Take Home
+# Pokémon Search & Filter
 
-A minimal TypeScript Expo app with one screen displaying **Hello World**. Uses `expo-dev-client` for development builds and strict TypeScript checking.
+One **Pokémon Search & Filter** storefront shipped to **Web (React)** and **Mobile (Expo)** from a single pnpm monorepo. Data fetching, search/filter logic and design tokens live in `shared/`; each platform only owns its rendering layer.
 
-Uses Expo SDK 55 to support the installed Xcode 26.2. Expo SDK 56 and 57 require Xcode 26.4 or newer.
-
-## Run locally
-
-```sh
-npm install
-npm run ios
-# or
-npm run android
+```
+take-home/
+├── server/    mock API: 50 Gen 1 Pokémon from PokéAPI at GET /api/products[/:id] (Node, zero deps)
+├── shared/    @take-home/shared — React Query hook, search logic, design tokens
+├── web/       @take-home/web    — React 19 + Vite
+└── mobile/    @take-home/mobile — Expo SDK 55 + React Native 0.83
 ```
 
-The first run generates the native project, builds and installs the development client, and starts Metro. iOS requires Xcode and an iOS simulator; Android requires Android Studio and an emulator or connected device.
+## Run it
 
-After installing the development build, start subsequent development sessions with:
+Requires Node 22 and pnpm 10. Open three terminals:
 
 ```sh
-npm start
+pnpm install
+
+pnpm server     # http://localhost:4000/api/products
+pnpm web        # http://localhost:3000
+pnpm ios        # first run builds the dev client; afterwards `pnpm mobile` starts Metro
 ```
 
-Open the installed development build. Edit `App.tsx` to change the home screen. Run `npm run typecheck` to check TypeScript. Rebuild with `npm run ios` or `npm run android` after adding native dependencies or changing native configuration. Generated `ios/` and `android/` folders are ignored by Git.
+`pnpm typecheck` type-checks every package.
 
-## Expo documentation
+## How it fits together
 
-- [Blank template](https://docs.expo.dev/more/create-expo/)
-- [TypeScript setup](https://docs.expo.dev/guides/typescript/)
-- [Local development builds](https://docs.expo.dev/guides/local-app-development/)
-- [Development client](https://docs.expo.dev/versions/latest/sdk/dev-client/)
+```
+server/products.json
+        │  GET /api/products
+        ▼
+shared/products/api.ts        useProducts()            React Query: fetch + cache + retry
+        │
+shared/stores/product-search-store.ts                  zustand: query + selected categories
+        │
+shared/hooks/use-product-search.ts                     useProducts + store → categories, results, loading state
+        │
+web/ and mobile/                                       every component calls useProductSearch() itself;
+  ProductSearchScreen                                  the screen early-returns one state per branch
+    └─ ProductSearchLayout (title, SearchBar, chips)   (loading / error / empty / results) inside the
+         └─ LoadingState | ErrorState |                shared layout, per the "component composition"
+            ResultsMeta + EmptyState |                 pattern
+            ResultsMeta + ProductList
+```
+
+**`shared/`** may only depend on `react`, `@tanstack/react-query` and `zustand`. Nothing in it imports `react-dom`, `react-native`, or browser/Node globals. It is consumed straight from TypeScript source by Vite and Metro, so there is no build step.
+
+| File | Responsibility |
+| --- | --- |
+| `shared/src/products/types.ts` | `Product` and `ProductFilters` |
+| `shared/src/lib/api/config.ts` | API base URL: defaults to localhost, `setApiBaseUrl` overrides once at startup |
+| `shared/src/lib/api/endpoints.ts` | Endpoint store (`api.products.retrieveAll()`); every URL in one place |
+| `shared/src/lib/api/query-keys.ts` | Query key factory (`queryKeys.products.all()`); one place to invalidate from |
+| `shared/src/products/api.ts` | `useProducts` / `useProduct` (React Query) built from the endpoint store and key factory |
+| `shared/src/products/search-products.ts` | Pure `searchProducts` / `getCategories`; case- and accent-insensitive, multi-word AND, categories OR |
+| `shared/src/stores/product-search-store.ts` | zustand store for the query and selected categories, so every component sees the same state |
+| `shared/src/hooks/use-product-search.ts` | The hook every search component calls: `useProducts` + the store → categories, results, loading state |
+| `web/src/features/product-search/`, `mobile/src/features/product-search/` | `ProductSearchLayout` (shared chrome) and the screen, which early-returns per state |
+| `shared/src/theme/tokens.ts` | Colors (light + dark), spacing, radii, typography, layout |
+| `shared/src/theme/css-variables.ts` | Tokens → CSS custom properties for the web |
+| `web/src/theme/apply-theme.ts` | Writes the tokens onto `<html>`; all CSS uses `var(--…)` |
+| `mobile/src/theme/use-theme.ts` | Resolves the same tokens into `StyleSheet`-ready values |
+| `web/src/main.tsx`, `mobile/App.tsx` | Call `setApiBaseUrl` with `VITE_API_URL` / `EXPO_PUBLIC_API_URL` when set |
+
+## Design consistency
+
+Both apps read the same semantic tokens (`background`, `surface`, `chipSelected`, `textSecondary`, …), the same 4pt spacing scale, radii and type ramp, and both follow the OS light/dark setting. Only the font family is platform-owned (system font). Change `palette.primary` in `tokens.ts` and both apps update.
+
+## Extending
+
+- **New Pokémon or type**: edit `server/products.json` (generated from PokéAPI). Type chips are derived from the data.
+- **New filter (price range, in-stock, sort)**: add a field to `ProductFilters`, handle it in `searchProducts`, expose state in `useProductSearch`, add a control per platform.
+- **Real backend**: call `setApiBaseUrl` with its URL (or set the env var). `useProducts` already handles caching, retries and error states.
+- **Server-side search**: pass `query`/`categories` into `fetchProducts` and the query key; the screens don't change.
+
+## Notes
+
+- The mock server adds 300 ms latency so loading states are visible.
+- Android emulator reaches the Mac at `10.0.2.2`; a physical device needs your LAN IP in `mobile/.env.local` as `EXPO_PUBLIC_API_URL`.
+- `mobile/ios` and `mobile/android` are generated by `expo run:*` and git-ignored.

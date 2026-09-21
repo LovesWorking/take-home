@@ -1,24 +1,21 @@
 {
   "name": "take-home",
   "version": "1.0.0",
-  "main": "index.ts",
-  "dependencies": {
-    "expo": "~55.0.31",
-    "expo-dev-client": "~55.0.40",
-    "expo-status-bar": "~55.0.6",
-    "react": "19.2.0",
-    "react-native": "0.83.10"
+  "private": true,
+  "packageManager": "pnpm@10.28.2",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
   },
   "scripts": {
-    "start": "expo start --dev-client",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "typecheck": "tsc --noEmit"
+    "server": "pnpm --filter @take-home/server dev",
+    "web": "pnpm --filter @take-home/web dev",
+    "mobile": "pnpm --filter @take-home/mobile start",
+    "ios": "pnpm --filter @take-home/mobile ios",
+    "android": "pnpm --filter @take-home/mobile android",
+    "typecheck": "pnpm -r typecheck"
   },
-  "private": true,
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
-    "@types/react": "~19.2.4",
     "typescript": "~5.9.2"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "name": "@take-home/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "generate": "node generate-products.mjs"
+  }
+}
