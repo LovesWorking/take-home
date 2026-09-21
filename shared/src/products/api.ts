@@ -3,6 +3,9 @@ import { api } from '../lib/api/endpoints';
 import { queryKeys } from '../lib/api/query-keys';
 import type { Product } from './types';
 
+// Stale time
+const FiveMinutes = 5 * 60 * 1000;
+
 async function getJson<T>(url: string): Promise<T> {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Request failed (${res.status}): ${url}`);
@@ -35,8 +38,7 @@ export function useProducts() {
   return useQuery({
     queryKey: queryKeys.products.all(),
     queryFn: fetchProducts,
-    staleTime: 5 * 60 * 1000,
-    retryOnMount: false,
+    staleTime: FiveMinutes,
   });
 }
 
@@ -45,7 +47,6 @@ export function useProduct(id: string) {
   return useQuery({
     queryKey: queryKeys.products.detail(id),
     queryFn: () => fetchProduct(id),
-    staleTime: 5 * 60 * 1000,
-    retryOnMount: false,
+    staleTime: FiveMinutes,
   });
 }
