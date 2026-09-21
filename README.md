@@ -1,3 +1,8 @@
+
+
+
+https://github.com/user-attachments/assets/a32e0036-435b-4b15-8296-879736b8a6f8
+
 # Pokémon Search & Filter
 
 One **Pokémon Search & Filter** storefront shipped to **Web (React)** and **Mobile (Expo)** from a single pnpm monorepo. Data fetching, search/filter logic and design tokens live in `shared/`; each platform only owns its rendering layer.
